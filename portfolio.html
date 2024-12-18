@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Tanusia Ramesh</title>
+<style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('images/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Header Section */
+        .header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 3em;
+            font-weight: bold;
+            color: #2c3e50;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .name::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #3498db, #e74c3c);
+            border-radius: 2px;
+        }
+
+        /* Quote Styling */
+        .quote {
+            margin-top: 15px;
+            font-size: 1.2em;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+
+        /* Portfolio Image Section */
+        .portfolio-img {
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            animation: scrapbook 5s ease-in-out infinite;
+        }
+
+        .portfolio-img img {
+            width: 300px;
+            border: 5px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        /* Scrapbook Animation */
+        @keyframes scrapbook {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(-5deg) scale(1.05);
+            }
+            50% {
+                transform: rotate(5deg) scale(1.1);
+            }
+            75% {
+                transform: rotate(-5deg) scale(1.05);
+            }
+        }
+
+        /* Section Styles */
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center the sections content */
+            width: 80%; /* Reduced width from 100% to 80% */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section h3 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .section ul {
+            padding-left: 20px;
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .section ul li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        /* Navigation Icons */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-container img {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .nav-container img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Contact Info */
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1em;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body onLoad="MM_preloadImages('images/home icon click.png','images/biodata icon click.png','images/portfolio icon click.png','images/gallery icon click.png','images/feedback icon click.png')">
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">PORTFOLIO</div>
+            <div class="quote">
+              <p>&lt;/♪ No more ‘What do I do with my life?’ I’ve got a portfolio now! ♪/&gt;</p>
+            </div>
+        </div>
+
+        <!-- Navigation Icons -->
+        <div class="nav-container"><a href="index.html.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','images/home icon click.png',1)"><img src="images/home icon.png" alt="" width="309" height="77" id="Image5"></a><a href="biodata.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/biodata icon click.png',1)"><img src="images/biodata icon.png" alt="" width="309" height="77" id="Image6"></a><a href="portfolio.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/portfolio icon click.png',1)"><img src="images/portfolio icon.png" alt="" width="317" height="77" id="Image7"></a><a href="gallery.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/gallery icon click.png',1)"><img src="images/gallery icon.png" alt="" width="309" height="77" id="Image8"></a><a href="comments.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/feedback icon click.png',1)"><img src="images/feedback icon.png" alt="" width="309" height="77" id="Image9"></a></div>
+
+        <!-- Portfolio Image -->
+        <div class="portfolio-img">
+            <img src="images/portfolio pic.png" alt="Portfolio Picture">
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h3>Education</h3>
+            <ul>
+                <li>Multimedia Technology, Degree, UMSKAL, 2022 - Present</li>
+                <li>STPM, SMK Datuk Bendahara, Melaka, 2020 - 2022</li>
+                <li>SPM, SMK Iskandar Shah, Melaka, 2015 - 2019</li>
+            </ul>
+        </div>
+
+        <!-- Work Experience Section -->
+        <div class="section">
+            <h3>Work Experience</h3>
+            <ul>
+                <li>Online Tutor, Freelancing | October 2023 - Present</li>
+                <li>Sales Assistant, Jasin | June 2022 - October 2022</li>
+                <li>Teacher, Jasin | July 2022 - October 2022</li>
+            </ul>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="section">
+            <h3>Languages</h3>
+            <ul>
+                <li>Tamil (Native speaker)</li>
+                <li>English (Highly Proficient)</li>
+                <li>Malay (Highly Proficient)</li>
+                <li>Mandarin (Learning)</li>
+            </ul>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h3>Skills</h3>
+            <ul>
+                <li>Experienced in computer skills</li>
+                <li>Proficient in using Canva</li>
+                <li>Strategic planning and scheduling</li>
+                <li>Time-management skills</li>
+                <li>Verbal and written communication</li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+              <div style="display: flex; align-items: center;"> <a href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsapp icon.png" width="32" height="32" alt="WhatsApp Icon"></a>
+                    <span style="margin-left: 10px;">016-7657689</span>
+                </div>
+                <div style="display: flex; align-items: center;"> <a href="https://mail.google.com/mail/u/0/" target="_blank"><img src="images/email icon.png" width="32" height="32" alt="Email Icon"></a>
+                    <a href="mailto:rtanusia16@gmail.com" style="margin-left: 10px; text-decoration: none; color: #333;">rtanusia16@gmail.com</a>
+                </div>
+                <div style="display: flex; align-items: center;"> <a href="https://www.instagram.com/" target="_blank"><img src="images/insta icon.png" width="32" height="32" alt="Instagram Icon"></a>
+                    <a href="https://instagram.com/rtanusia16_" target="_blank" style="margin-left: 10px; text-decoration: none; color: #333;">@rtanusia16_</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2024 Tanusia Ramesh | Multimedia Technology Portfolio
+        </div>
+    </div>
+</body>
+</html>

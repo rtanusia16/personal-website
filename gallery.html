@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif; /* Font */
+            background: url('images/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Header Section */
+        .header {
+            margin-bottom: 20px; /* Reduced margin */
+            border-bottom: 2px solid #ddd; /* Divider line */
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3em; /* Font size */
+            font-weight: bold;
+            color: #2c3e50;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header h1::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #3498db, #e74c3c);
+            border-radius: 2px;
+        }
+
+        /* Subtitle Styling */
+        .subtitle {
+            font-size: 1.2em; /* Font size */
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 15px;
+        }
+
+        /* Navigation Icons */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav-container img {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .nav-container img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Photo Slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            animation: scrollPhotos 15s linear infinite;
+        }
+
+        .slider img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .slider img:hover {
+            transform: scale(1.5);
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        @keyframes scrollPhotos {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Video Carousel */
+        .carousel-container {
+            width: 80%;
+            margin: 50px auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel {
+            display: flex;
+            animation: scrollVideos 20s linear infinite;
+        }
+
+        .carousel video {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .carousel video:hover {
+            transform: scale(1.5);
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        @keyframes scrollVideos {
+            0% {
+                transform: translateX(-50%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Containers for Sections */
+        .photos-container,
+        .videos-container {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body onLoad="MM_preloadImages('images/biodata icon click.png','images/portfolio icon click.png','images/gallery icon click.png','images/feedback icon click.png','images/home icon click.png')">
+    <div class="container">
+        <div class="header">
+            <h1>GALLERY</h1>
+            <p class="subtitle">&lt;/♪ With you, these are the best days of my life ♪/&gt;</p>
+        </div>
+
+      <!-- Navigation Icons -->
+        <div class="nav-container"><a href="biodata.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','images/biodata icon click.png',1)">
+            </a><a href="index.html.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','images/home icon click.png',1)"><img src="images/home icon.png" alt="" width="309" height="77" id="Image11"></a><a href="biodata.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','images/biodata icon click.png',1)"><img src="images/biodata icon.png" alt="" width="309" height="77" id="Image12">
+            </a>
+            <a href="portfolio.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','images/portfolio icon click.png',1)">
+                <img src="images/portfolio icon.png" alt="" width="317" height="77" id="Image13">
+            </a>
+            <a href="gallery.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','images/gallery icon click.png',1)">
+        <img src="images/gallery icon.png" alt="" width="309" height="77" id="Image14"></a><a href="comments.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','images/feedback icon click.png',1)"><img src="images/feedback icon.png" alt="" width="309" height="77" id="Image15"></a></div>
+
+        <!-- Photos Section -->
+      <div class="photos-container">
+            <h2>&nbsp;</h2>
+            <h2>&lt;/Photos/&gt;</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="images/pic1.jpg" alt="">
+                    <img src="images/pic2.jpg" alt="">
+                    <img src="images/pic3.jpg" alt="">
+                    <img src="images/pic4.jpg" alt="">
+                    <img src="images/pic5.jpg" alt="">
+                    <!-- Duplicate items for seamless scrolling -->
+                    <img src="images/pic1.jpg" alt="">
+                    <img src="images/pic2.jpg" alt="">
+                    <img src="images/pic3.jpg" alt="">
+                    <img src="images/pic4.jpg" alt="">
+                    <img src="images/pic5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Videos Section -->
+      <div class="videos-container">
+            <h2>&nbsp;</h2>
+            <h2>&lt;/Videos/&gt;</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <video muted>
+                        <source src="videos/video1.mp4" type="video/mp4">
+                    </video>
+                    <video muted>
+                        <source src="videos/video2.mp4" type="video/mp4">
+                    </video>
+                    <video muted>
+                        <source src="videos/video3.mp4" type="video/mp4">
+                    </video>
+                    <video muted>
+                        <source src="videos/video4.mp4" type="video/mp4">
+                    </video>
+                    <!-- Duplicate items for seamless scrolling -->
+                    <video muted>
+                        <source src="videos/video1.mp4" type="video/mp4">
+                    </video>
+                    <video muted>
+                        <source src="videos/video2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+</div>
+
+<script>
+        // Play videos during sliding and manage hover behavior
+        const videos = document.querySelectorAll(".carousel video");
+
+        videos.forEach(video => {
+            // Play videos continuously
+            video.play();
+
+            // On hover, pause the video and reset to the beginning
+            video.addEventListener("mouseenter", () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+
+            // On hover out, resume playing
+            video.addEventListener("mouseleave", () => {
+                video.play();
+            });
+
+            // On click, toggle play/pause
+            video.addEventListener("click", () => {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

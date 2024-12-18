@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Comments</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('images/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #f8f8f8;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 5px; /* Reduced spacing */
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header .subtitle {
+            font-size: 1em;
+            font-style: italic;
+            color: #ddd;
+        }
+
+        /* Navigation */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Adjusted for tighter spacing */
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 10px;
+        }
+
+        .nav-container img {
+            width: 150px;
+            height: auto; /* Ensure consistent height for all icons */
+            display: block; /* Prevent inline spacing issues */
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .nav-container img:hover {
+            transform: scale(1.2);
+            filter: brightness(1.5);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 600px;
+            margin: 0 auto 30px auto; /* Centered and aligned with navigation */
+            padding: 30px;
+            background: linear-gradient(135deg, #ffffff, #e6e6e6);
+            color: #333;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid #ddd;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #333;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            margin-bottom: 5px; /* Reduced spacing */
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            text-align: left;
+        }
+
+        input, textarea {
+            padding: 15px;
+            border: 2px solid #444;
+            border-radius: 10px;
+            font-size: 1em;
+            background: #f9f9f9;
+            color: #333;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #0077ff;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 119, 255, 0.5);
+        }
+
+        button {
+            background: #fff;
+            color: #0077ff;
+            border: 2px solid #0077ff;
+            padding: 12px 20px;
+            font-size: 1em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background: #0077ff;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 119, 255, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #f8f8f8;
+            font-size: 0.9em;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+<body onLoad="MM_preloadImages('images/home icon click.png','images/biodata icon click.png','images/portfolio icon click.png','images/gallery icon click.png','images/feedback icon click.png')">
+    <!-- Header -->
+    <header></header>
+	
+
+<!-- Navigation Icons -->
+    <div class="nav-container"><a href="index.html.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image1','','images/home icon click.png',1)"><img src="images/home icon.png" alt="" width="309" height="77" id="Image1"></a><a href="biodata.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','images/biodata icon click.png',1)"><img src="images/biodata icon.png" alt="" width="309" height="77" id="Image2"></a><a href="portfolio.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','images/portfolio icon click.png',1)"><img src="images/portfolio icon.png" alt="" width="317" height="77" id="Image3"></a><a href="gallery.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','images/gallery icon click.png',1)"><img src="images/gallery icon.png" alt="" width="309" height="77" id="Image4"></a><a href="comments.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','images/feedback icon click.png',1)"><img src="images/feedback icon.png" alt="" width="309" height="77" id="Image5"></a></div>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Your Comments</h2>
+        <p><span class="subtitle">&lt;/♪ Speak now or forever hold your peace ♪/&gt;</span></p>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Tanusia Ramesh. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('images/background.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Main Content Styling */
+        .quote-img {
+            margin: 20px auto;
+            font-family: Alice, sans-serif;
+            font-size: 38px;
+            color: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .quote-subtitle {
+            font-family: 'Pinyon Script', sans-serif;
+            font-size: 36px;
+            color: white;
+            animation: slideIn 3s ease-in-out;
+            margin-top: 5px; /* Small margin above subtitle */
+        }
+
+        .nav-container {
+            margin: 30px 0;
+        }
+
+        .nav-container a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .nav-container a:hover {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+
+        .nav-container img {
+            width: 240px;
+            height: auto;
+        }
+
+        /* Intro Section */
+        .intro-img-container {
+            position: relative;
+            display: inline-block;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            width: 1239px;
+        }
+
+        .intro-img-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .intro-img-container img.home-pic {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -20%); /* Adjusted vertical position */
+            z-index: 1; /* Ensure home-pic is on top */
+        }
+
+        /* Decorative Line */
+        .line {
+            height: 3px;
+            width: 60%; /* Wider decorative line */
+            background-color: #555;
+            margin: 30px auto;
+            z-index: 2; /* Ensure it's above other content */
+        }
+
+        /* Footer Icons */
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+        }
+
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Space between icons */
+            z-index: 3; /* Ensure they are on top of other content */
+        }
+
+        .footer .social-icons img {
+            width: 80px; /* Adjusted size */
+            height: auto;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .footer .social-icons img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .footer .social-icons img {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .footer .social-icons img:hover {
+            transform: scale(1.2); /* Pop effect */
+            opacity: 0.8; /* Slight transparency */
+        }
+
+        /* Custom Text Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Additional Styles */
+        .delicate-text {
+            font-family: 'Pinyon Script', sans-serif;
+            font-size: 36px;
+            color: white;
+            animation: slideIn 3s ease-in-out;
+            margin-top: 5px; /* Small margin above subtitle */
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+    <script type="text/javascript">
+        function MM_preloadImages() { //v3.0
+            var d = document; 
+            if (d.images) { 
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length, a = MM_preloadImages.arguments; 
+                for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) { 
+                        d.MM_p[j] = new Image; 
+                        d.MM_p[j++].src = a[i]; 
+                    }
+            }
+        }
+        function MM_swapImgRestore() { //v3.0
+            var i, x, a = document.MM_sr; 
+            for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) 
+                x.src = x.oSrc;
+        }
+        function MM_findObj(n, d) { //v4.01
+            var p, i, x;  
+            if (!d) d = document; 
+            if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                d = parent.frames[n.substring(p + 1)].document; 
+                n = n.substring(0, p);
+            }
+            if (!(x = d[n]) && d.all) x = d.all[n]; 
+            for (i = 0; !x && i < d.forms.length; i++) 
+                x = d.forms[i][n];
+            for (i = 0; !x && d.layers && i < d.layers.length; i++) 
+                x = d.layers[i].document[n];
+            if (!x && d.getElementById) x = d.getElementById(n); 
+            return x;
+        }
+        function MM_swapImage() { //v3.0
+            var i, j = 0, x, a = MM_swapImage.arguments; 
+            document.MM_sr = new Array(); 
+            for (i = 0; i < (a.length - 2); i += 3)
+                if ((x = MM_findObj(a[i])) != null) { 
+                    document.MM_sr[j++] = x; 
+                    if (!x.oSrc) x.oSrc = x.src; 
+                    x.src = a[i + 2]; 
+                }
+        }
+    </script>
+</head>
+<body onLoad="MM_preloadImages('images/home icon click.png','images/biodata icon click.png','images/portfolio icon click.png','images/gallery icon click.png','images/feedback icon click.png')">
+    <!-- Quote Image -->
+    <div class="quote-img">
+      <p><img src="images/quote1.png" width="1123" height="84" alt=""/><img src="images/quote2.png" width="1124" height="83" alt=""/></p>
+    </div>
+
+    <!-- Navigation Icons -->
+    <div class="nav-container">
+        <a href="index.html.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','images/home icon click.png',1)">
+        <img src="images/home icon.png" alt="Home" id="Image6">
+        </a>
+        <a href="biodata.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/biodata icon click.png',1)">
+        <img src="images/biodata icon.png" alt="Biodata" id="Image7">
+        </a>
+        <a href="portfolio.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/portfolio icon click.png',1)">
+        <img src="images/portfolio icon.png" alt="Portfolio" id="Image8">
+        </a>
+        <a href="gallery.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/gallery icon click.png',1)">
+        <img src="images/gallery icon.png" alt="Gallery" id="Image9">
+        </a>
+        <a href="comments.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/feedback icon click.png',1)">
+        <img src="images/feedback icon.png" alt="Feedback" id="Image10">
+        </a>
+    </div>
+
+    <div class="container">
+        <!-- Biodata Details --><!-- Intro Section -->
+    <div class="intro-img-container">
+        <img src="images/home pic.png" alt="Intro" class="name-pic">
+</div>
+
+    <!-- Decorative Line -->
+    <div class="line"></div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+      <div class="social-icons">
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="images/whatsapp icon.png" alt="WhatsApp"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="images/insta icon.png" alt="Instagram"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="images/youtube icon.png" alt="YouTube"></a>
+            <a href="https://mail.google.com/mail/u/0/" target="_blank"><img src="images/email icon.png" alt="Email"></a>
+      </div>
+    </div>
+</body>
+<footer>
+    &copy; 2024 Tanusia Ramesh. All rights reserved.
+</footer>
+</html>
